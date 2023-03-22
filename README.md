@@ -10,7 +10,6 @@ The tool uses the oracledb, psycopg2 and pymysql packages to connect to the resp
 ![DALL·E 2023-03-22 12 23 40 - pixel image of ammeter with 4 clouds in background](https://user-images.githubusercontent.com/39692236/226779332-fe58d03f-307a-45bc-9459-1a2225bbafad.png)
 
 
-
 🔧 DELTA is a cloud tool to test real-world latency against a remote database endpoint using execution of a query and calculating the network return time. 
 
 
@@ -21,13 +20,10 @@ The tool uses the oracledb, psycopg2 and pymysql packages to connect to the resp
 
 
 
-![DALL·E 2023-03-22 12 22 56 - pixel image of IT geek playing with ammeter on a sunny day](https://user-images.githubusercontent.com/39692236/226779346-2cb2bb6c-66d4-48a5-980f-fc385a68a055.png)
-
-
  🔌 Databases Supported :
 
  
- 📌 Oracle : 
+ 📌 Oracle >= 12.2 : 
 
 - Amazon RDS Oracle
 
@@ -40,7 +36,17 @@ The tool uses the oracledb, psycopg2 and pymysql packages to connect to the resp
 - Oracle Database On-Premise
 
 
-📌 MySQL : 
+
+📌 Postgres >= 11 :
+
+- Amazon RDS Postgres
+
+- Amazon RDS Aurora Postgres
+
+- Postgres On-premise 
+
+
+📌 MySQL >= 5.7 : 
 
 - Amazon RDS MySQL
 
@@ -50,19 +56,19 @@ The tool uses the oracledb, psycopg2 and pymysql packages to connect to the resp
 
 - OCI MySQL Heatwave
 
-- On-premise MySQL
+- MySQL On-Premise
 
 
-📌 Postgres :
+📌 SQL Server >= 2014 : 
 
-- Amazon RDS Postgres
+- Amazon RDS SQL Server
 
-- Amazon RDS Aurora Postgres
+- Azure SQL Server
 
-- On-premise Postgres
+- SQL Server On-Premise
 
 
-📌 URL :
+📌 URL - HTTPS | HTTP:
 
 - Check Public or Private URLs for latency
 
