@@ -20,10 +20,10 @@ The tool uses the oracledb, psycopg2 and pymysql packages to connect to the resp
 
 
 
- 🔌 Databases Supported :
+ ## Databases Supported 🔌 :
 
  
- 📌 Oracle >= 12.2 : 
+ ### Oracle DB >= 12.2 📌  : 
 
 - Amazon RDS Oracle
 
@@ -37,7 +37,7 @@ The tool uses the oracledb, psycopg2 and pymysql packages to connect to the resp
 
 
 
-📌 Postgres >= 11 :
+### Postgres >= 11 📌 :
 
 - Amazon RDS Postgres
 
@@ -46,7 +46,7 @@ The tool uses the oracledb, psycopg2 and pymysql packages to connect to the resp
 - Postgres On-premise 
 
 
-📌 MySQL >= 5.7 : 
+### MySQL >= 5.7 📌  : 
 
 - Amazon RDS MySQL
 
@@ -59,7 +59,7 @@ The tool uses the oracledb, psycopg2 and pymysql packages to connect to the resp
 - MySQL On-Premise
 
 
-📌 SQL Server >= 2014 : 
+### SQL Server >= 2014 📌 : 
 
 - Amazon RDS SQL Server
 
@@ -68,7 +68,7 @@ The tool uses the oracledb, psycopg2 and pymysql packages to connect to the resp
 - SQL Server On-Premise
 
 
-📌 URL - HTTPS | HTTP:
+### URL - HTTPS | HTTP 📌 :
 
 - Check Public or Private URLs for latency
 
