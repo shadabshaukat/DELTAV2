@@ -73,3 +73,5 @@ The tool uses the oracledb, psycopg2 and pymysql packages to connect to the resp
 - Check Public or Private URLs for latency
 
 # Requirements
+
+Python 3.6.8
