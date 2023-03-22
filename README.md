@@ -1,2 +1,2 @@
 # STAND_V2
-A re-wrriten from scratch version of STAND to calculate latency more accurately and display p99 latency
+A version of STAND written from scratch to calculate Multi-Cloud Database latency more accurately and display the p99 latency
