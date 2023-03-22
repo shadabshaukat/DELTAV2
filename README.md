@@ -1,5 +1,5 @@
 # DELTA V2
-## DB(D)  Endpoint(E)  Latency(L)  Testing(T)  Ammeter(A)
+## DB(D)  Endpoint(E)  Latency(L)  Testing(T)  Ammeter(A) Version 2
 
 Annoucing a new version of DELTA, a tool to calculate Cloud Database endpoint latency using SQL queries. This version is written from scratch to calculate latency more accurately and also to give p99 latency
 
