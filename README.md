@@ -74,4 +74,18 @@ The tool uses the oracledb, psycopg2 and pymysql packages to connect to the resp
 
 # Requirements
 
-Python 3.6.8
+Python >= 3.6.8
+
+# Deploy
+
+## Clone Repository
+
+
+
+## Install Python packages
+
+sudo pip3 install -r requirements.txt
+
+## Run for Oracle 
+
+
