@@ -8,11 +8,12 @@ import numpy as np
 from cryptography import __version__ as cryptography_version
 from urllib.parse import urlparse
 import requests
+import matplotlib.pyplot as plt
 
-import cx_Oracle as oracledb
-import psycopg2
+import oracledb
+#import psycopg2
 import pymysql
-import pyodbc
+#import pyodbc
 
 if cryptography_version < "3.4":
     warnings.filterwarnings("ignore", category=UserWarning, message=".*will be forbidden in the future.*")
@@ -20,9 +21,9 @@ if cryptography_version < "3.4":
 query_times = []
 
 # Oracle Database credentials
-oracle_un = 'your_username'
-oracle_pw = 'your_password'
-oracle_cs = 'your_oracle_connection_string' # Can be full connectivity string or host:port/servicename. Works with Oracle DB >= 12.2 only
+oracle_un = 'admin'
+oracle_pw = '******'
+oracle_cs = '(description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1521)(host=adb.ap-melbourne-1.oraclecloud.com))(connect_data=(service_name=g9b8049aad9c64c_y16fuv7vqq9428l5_high.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))'
 
 # PostgreSQL credentials
 pgsql_un = 'your_username'
@@ -51,7 +52,21 @@ test_url = 'https://www.google.com.au'
 def calculate_p99_latency():
     if len(query_times) > 0:
         p99_latency = np.percentile(query_times, 99)
-        print("P99 latency: {:.2f} ms".format(p99_latency))
+        p90_latency = np.percentile(query_times, 90)
+        stddev_latency = np.std(query_times)
+        avg_latency = np.average(query_times)
+        mean_latency = np.mean(query_times)
+        print("++++++++++++++++++++++")
+        print("P99 Latency: {:.2f} ms".format(p99_latency))
+        print("P90 Latency: {:.2f} ms".format(p90_latency))
+        print("++++++++++++++++++++++")
+        print("Standard Deviation Latency: {:.2f} ms".format(stddev_latency))
+        print("++++++++++++++++++++++")
+        print("Average Latency: {:.2f} ms".format(avg_latency))
+        print("++++++++++++++++++++++")
+        print("Mean Latency: {:.2f} ms".format(mean_latency))
+        print("++++++++++++++++++++++")
+
     else:
         print("No queries were executed.")
 
@@ -211,3 +226,11 @@ while time.perf_counter() < end_time:
 
 # Calculate and print the final P99 latency
 calculate_p99_latency()
+
+# Plot the latencies on a graph
+plt.figure(figsize=(10, 5))
+plt.plot(query_times, marker='o')
+plt.title('Latency Over Time')
+plt.xlabel('Query Number')
+plt.ylabel('Latency (ms)')
+plt.show()
