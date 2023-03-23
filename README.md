@@ -92,6 +92,17 @@ sudo pip3 install -r requirements.txt
 
 ## Calculate Latency for Oracle DB
 
+set the below parameters in script
+
+# Oracle Database credentials
+
+Set the below credentials in the delta.py script
+```
+oracle_un = 'your_user'
+oracle_pw = 'your_password'
+oracle_cs = 'your_connection_string'
+```
+Run
 ```
 python3 deltav2.py --db oracle --interval 1 --period 10 --csvoutput oracle_latency.csv
 ```
@@ -99,6 +110,11 @@ python3 deltav2.py --db oracle --interval 1 --period 10 --csvoutput oracle_laten
 
 ## Calculate URL Latency 
 
+Set the below parameter in the delta.py script
+```
+test_url = 'your_url'
+```
+Run
 ```
 python3 deltav2.py --db url --interval 1 --period 10 --csvoutput url_latency.csv
 ```
