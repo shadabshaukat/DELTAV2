@@ -103,7 +103,7 @@ oracle_cs = 'your_connection_string'
 ```
 Run
 ```
-python3 deltav2.py --db oracle --interval 1 --period 10 --csvoutput oracle_latency.csv
+python3 delta.py --db oracle --interval 1 --period 10 --csvoutput oracle_latency.csv
 ```
 ![latency_plot](https://user-images.githubusercontent.com/39692236/227104700-6b43fd20-1cda-4dbf-9874-a33980cbc0ce.png)
 
@@ -115,7 +115,7 @@ test_url = 'your_url'
 ```
 Run
 ```
-python3 deltav2.py --db url --interval 1 --period 10 --csvoutput url_latency.csv
+python3 delta.py --db url --interval 1 --period 10 --csvoutput url_latency.csv
 ```
 
 ![latency_plot](https://user-images.githubusercontent.com/39692236/227104926-44d78de5-2594-4122-9dc1-c168d74aa8da.png)
