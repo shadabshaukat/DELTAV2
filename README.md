@@ -77,7 +77,7 @@ The tool uses the oracledb, psycopg2 and pymysql packages to connect to the resp
 Python >= 3.6.8
 ```
 
-# Deploy
+## Deploy
 
 ```
 git clone https://github.com/shadabshaukat/DELTAV2.git
