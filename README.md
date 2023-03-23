@@ -72,12 +72,15 @@ The tool uses the oracledb, psycopg2 and pymysql packages to connect to the resp
 
 - Check Public or Private URLs for latency
 
-# Requirements
+# Deploy
+
+## Requirement
+
 ```
 Python >= 3.6.8
 ```
 
-## Deploy
+## Clone Repo
 
 ```
 git clone https://github.com/shadabshaukat/DELTAV2.git
