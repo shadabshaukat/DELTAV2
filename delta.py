@@ -21,9 +21,9 @@ if cryptography_version < "3.4":
 query_times = []
 
 # Oracle Database credentials
-oracle_un = 'admin'
-oracle_pw = '******'
-oracle_cs = '(description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1521)(host=adb.ap-melbourne-1.oraclecloud.com))(connect_data=(service_name=g9b8049aad9c64c_y16fuv7vqq9428l5_high.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))'
+oracle_un = 'your_username'
+oracle_pw = 'your_password'
+oracle_cs = 'your_connection_string'
 
 # PostgreSQL credentials
 pgsql_un = 'your_username'
