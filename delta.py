@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 
 import oracledb
 #import psycopg2
-import pymysql
+#import pymysql
 #import pyodbc
 
 if cryptography_version < "3.4":
