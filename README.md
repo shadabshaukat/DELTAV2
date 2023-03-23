@@ -73,19 +73,38 @@ The tool uses the oracledb, psycopg2 and pymysql packages to connect to the resp
 - Check Public or Private URLs for latency
 
 # Requirements
-
+```
 Python >= 3.6.8
+```
 
 # Deploy
 
-## Clone Repository
+```
+git clone https://github.com/shadabshaukat/DELTAV2.git
 
-
+cd DELTAV2/
+```
 
 ## Install Python packages
-
+```
 sudo pip3 install -r requirements.txt
+```
 
-## Run for Oracle 
+## Calculate Latency for Oracle DB
+
+```
+python3 deltav2.py --db oracle --interval 1 --period 10 --csvoutput oracle_latency.csv
+```
+![latency_plot](https://user-images.githubusercontent.com/39692236/227104700-6b43fd20-1cda-4dbf-9874-a33980cbc0ce.png)
+
+## Calculate URL Latency 
+
+```
+python3 deltav2.py --db url --interval 1 --period 10 --csvoutput url_latency.csv
+```
+
+![latency_plot](https://user-images.githubusercontent.com/39692236/227104926-44d78de5-2594-4122-9dc1-c168d74aa8da.png)
+
+
 
 
