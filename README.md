@@ -35,6 +35,10 @@ The tool uses the oracledb, psycopg2 and pymysql packages to connect to the resp
 
 - Oracle Database On-Premise
 
+### URL - HTTPS | HTTP 📌 :
+
+- Check Public or Private URLs for latency
+
 ## Coming Soon
 
 ### Postgres >= 11 📌 :
@@ -68,9 +72,6 @@ The tool uses the oracledb, psycopg2 and pymysql packages to connect to the resp
 - SQL Server On-Premise
 
 
-### URL - HTTPS | HTTP 📌 :
-
-- Check Public or Private URLs for latency
 
 # Deploy
 
