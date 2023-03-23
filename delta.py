@@ -233,4 +233,10 @@ plt.plot(query_times, marker='o')
 plt.title('Latency Over Time')
 plt.xlabel('Query Number')
 plt.ylabel('Latency (ms)')
+
+# Save the plot to a file
+output_file = "latency_plot.png"
+plt.savefig(output_file, bbox_inches='tight', dpi=300)
+
+# Display the plot
 plt.show()
