@@ -1,14 +1,10 @@
-# DELTA V2
-## DB(D)  Endpoint(E)  Latency(L)  Testing(T)  Ammeter(A) 
-## DELTA Version 2
+# DB(D)  Endpoint(E)  Latency(L)  Testing(T)  Ammeter(A) 
 
-Annoucing a new version of DELTA, a tool to calculate Cloud Database endpoint latency using SQL queries. This version is written from scratch to calculate latency more accurately and also to give p99 latency
+## DELTA 
 
 📌 Introducing DELTA (DB Endpoint Latency Testing Ammeter). DELTA is a tool to test real-world latency against a remote database using execution of a query and calculating the network return time. The tool provides functions to test latency of Oracle, MySQL and Postgres databases.
 
-The tool uses the oracledb, psycopg2 and pymysql packages to connect to the respective databases and execute a single query per request (you can specify multiple requests as well). The tool uses the time module to measure the time it takes to execute the query, fetch the results, and close the connection. It calculates the latency of each request and the average latency of all requests.
-
-![DALL·E 2023-03-22 12 23 40 - pixel image of ammeter with 4 clouds in background](https://user-images.githubusercontent.com/39692236/226779332-fe58d03f-307a-45bc-9459-1a2225bbafad.png)
+The tool uses the oracledb python package to connect to Oracle databases and execute a single query per request (you can specify multiple requests as well). The tool uses the time module to measure the time it takes to execute the query, fetch the results, and close the connection. It calculates the latency of each request and the average latency of all requests.
 
 
 🔧 DELTA is a cloud tool to test real-world latency against a remote database endpoint using execution of a query and calculating the network return time. 
@@ -36,11 +32,6 @@ The tool uses the oracledb, psycopg2 and pymysql packages to connect to the resp
 
 - Oracle Database On-Premise
 
-### URL - HTTPS | HTTP 📌 :
-
-- Check Public or Private URLs for latency
-
-## Coming Soon
 
 ### Postgres >= 11 📌 :
 
@@ -64,6 +55,11 @@ The tool uses the oracledb, psycopg2 and pymysql packages to connect to the resp
 - MySQL On-Premise
 
 
+### URL - HTTPS | HTTP 📌 :
+
+- Check Public or Private URLs for latency
+
+
 # Deploy
 
 ## Requirement
@@ -75,9 +71,9 @@ Python >= 3.6.8
 ## Clone Repo
 
 ```
-git clone https://github.com/shadabshaukat/DELTAV2.git
+git clone https://github.com/oracle-quickstart/db-endpoint-latency-testing-ammeter.git
 
-cd DELTAV2/
+cd db-endpoint-latency-testing-ammeter/
 ```
 
 ## Install Python packages
@@ -89,9 +85,9 @@ sudo pip3 install -r requirements.txt
 
 Set the below credentials in the delta.py script
 ```
-oracle_un = 'your_user'
-oracle_pw = 'your_password'
-oracle_cs = 'your_connection_string'
+oracle_un='your_user'
+oracle_pw='your_password'
+oracle_cs='your_connection_string'
 ```
 Run
 ```
@@ -99,6 +95,36 @@ python3 delta.py --db oracle --interval 5 --period 60 --csvoutput oracle_latency
 ```
 
 ![latency_plot](https://user-images.githubusercontent.com/39692236/227111334-baabf052-f386-4d61-b5ee-eb1be289007c.png)
+
+# Calculate Latency for MySQL 
+
+Set the below credentials in the delta.py script
+```
+mysql_un = 'mysql'
+mysql_pw = 'your_password'
+mysql_host = 'localhost'
+mysql_port = '3306'
+mysql_db = 'mysql'
+```
+Run
+```
+python3 delta.py --db mysql --interval 5 --period 60 --csvoutput mysql_latency.csv
+```
+
+# Calculate Latency for PostgreSQL 
+
+Set the below credentials in the delta.py script
+```
+pgsql_un = 'postgres'
+pgsql_pw = 'your_password'
+pgsql_host = 'localhost'
+pgsql_port = '5432'
+pgsql_db = 'postgres'
+```
+Run
+```
+python3 delta.py --db postgresql --interval 5 --period 60 --csvoutput postgres_latency.csv
+```
 
 
 # Calculate URL Latency 
@@ -113,7 +139,3 @@ python3 delta.py --db url --interval 5 --period 60 --csvoutput url_latency.csv
 ```
 
 ![latency_plot](https://user-images.githubusercontent.com/39692236/227111833-86b9666b-55f3-4b71-a190-25a932eca487.png)
-
-
-
-
