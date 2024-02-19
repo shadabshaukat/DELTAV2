@@ -64,16 +64,6 @@ The tool uses the oracledb, psycopg2 and pymysql packages to connect to the resp
 - MySQL On-Premise
 
 
-### SQL Server >= 2014 📌 : 
-
-- Amazon RDS SQL Server
-
-- Azure SQL Server
-
-- SQL Server On-Premise
-
-
-
 # Deploy
 
 ## Requirement
