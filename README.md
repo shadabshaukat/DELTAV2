@@ -88,7 +88,7 @@ sudo yum install postgresql postgresql-devel python36-devel
 ## On Ubuntu
 sudo apt install libpq-dev python3.x-dev
 
-## Install requirements
+## MacOS Install requirements
 pip3 install -r requirements.txt
 ```
 
