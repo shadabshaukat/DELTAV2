@@ -8,7 +8,7 @@ import numpy as np
 from cryptography import __version__ as cryptography_version
 from urllib.parse import urlparse
 import requests
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 import oracledb
 import psycopg2
@@ -221,15 +221,15 @@ while time.perf_counter() < end_time:
 calculate_p99_latency()
 
 # Plot the latencies on a graph
-#plt.figure(figsize=(10, 5))
-#plt.plot(query_times, marker='o')
-#plt.title('Latency Over Time')
-#plt.xlabel('Query Number')
-#plt.ylabel('Latency (ms)')
+plt.figure(figsize=(10, 5))
+plt.plot(query_times, marker='o')
+plt.title('Latency Over Time')
+plt.xlabel('Query Number')
+plt.ylabel('Latency (ms)')
 
 # Save the plot to a file
 output_file = "latency_plot.png"
-#plt.savefig(output_file, bbox_inches='tight', dpi=300)
+plt.savefig(output_file, bbox_inches='tight', dpi=300)
 
 # Display the plot
-#plt.show()
+plt.show()
